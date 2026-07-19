@@ -1,34 +1,113 @@
-<style>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mr Vilankulo FX</title>
 
+<style>
 body {
     background: #0b0f19;
     color: white;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     text-align: center;
+    padding: 20px;
 }
 
-.cards {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #151c2c;
-    padding: 15px;
-    border-radius: 10px;
-    flex: 1;
-    min-width: 120px;
-    text-align: center;
-    border: 1px solid #00ff99;
+h1 {
+    color: #00ff99;
 }
 
 .box {
     background: #151c2c;
     padding: 20px;
-    border-radius: 15px;
     margin-top: 20px;
+    border-radius: 15px;
+    border: 1px solid #00ff99;
 }
 
+button {
+    background: #00ff99;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#previewGrafico {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: none;
+}
 </style>
+
+</head>
+
+<body>
+
+<h1>🤖 Mr Vilankulo FX</h1>
+
+<h2>📸 Enviar Gráfico para Análise IA</h2>
+
+<input type="file" id="imagemGrafico" accept="image/*">
+
+<br><br>
+
+<button onclick="analisarGrafico()">
+🤖 Enviar para Análise
+</button>
+
+<img id="previewGrafico">
+
+<div class="box" id="resultado">
+Aguardando envio do gráfico...
+</div>
+
+
+<script>
+
+function analisarGrafico() {
+
+let imagem = document.getElementById("imagemGrafico").files[0];
+
+let resultado = document.getElementById("resultado");
+
+if (!imagem) {
+resultado.innerHTML = "⚠️ Envie primeiro o gráfico.";
+return;
+}
+
+let preview = document.getElementById("previewGrafico");
+
+preview.src = URL.createObjectURL(imagem);
+
+preview.style.display = "block";
+
+
+resultado.innerHTML = `
+🤖 Mr Vilankulo FX - Análise IA
+
+📸 Gráfico recebido:
+${imagem.name}
+
+📌 Ativo: XAUUSD
+
+⏱ Timeframe: H1
+
+📈 Tendência: A analisar...
+
+🎯 Entrada: Aguardando IA
+
+🛑 Stop Loss: Aguardando IA
+
+💰 Take Profit: Aguardando IA
+
+📝 A IA está a preparar a análise do gráfico.
+`;
+
+}
+
+</script>
+
+</body>
+</html>
