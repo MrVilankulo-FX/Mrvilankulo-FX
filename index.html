@@ -1,10 +1,18 @@
-<script>
 function analisarGrafico() {
 
+let imagem = document.getElementById("imagemGrafico").files[0];
 let resultado = document.getElementById("resultado");
+
+if (!imagem) {
+    resultado.innerHTML = "⚠️ Envie primeiro o gráfico para análise.";
+    return;
+}
 
 resultado.innerHTML = `
 🤖 Mr Vilankulo FX - Análise IA
+
+📸 Gráfico recebido:
+${imagem.name}
 
 📌 Ativo: XAUUSD
 
@@ -18,10 +26,7 @@ resultado.innerHTML = `
 
 💰 Take Profit: Aguardando IA
 
-📝 Explicação:
-
-A IA vai analisar a estrutura do mercado, zonas de suporte e resistência, e procurar uma possível oportunidade.
+📝 A IA está a preparar a análise do gráfico.
 `;
 
 }
-</script>
