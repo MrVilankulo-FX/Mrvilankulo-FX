@@ -1,41 +1,33 @@
-<div class="box">
+<h2>📊 Análise Forex IA</h2>
 
-<h2>📸 Enviar Gráfico MT5</h2>
-
-<p>
-Envie o seu screenshot do gráfico para preparar uma análise.
-</p>
+<p>Envie o seu screenshot do gráfico para preparar uma análise.</p>
 
 <input type="file" id="imagemGrafico" accept="image/*">
 
 <br><br>
 
-<input type="text" placeholder="Par: Ex XAUUSD">
-
-<br><br>
-
+<label>Par:</label>
 <select>
-<option>Escolha o Timeframe</option>
-<option>M15</option>
-<option>M30</option>
-<option>H1</option>
-<option>H4</option>
+    <option>XAUUSD</option>
+    <option>EURUSD</option>
+    <option>GBPUSD</option>
 </select>
 
 <br><br>
 
-<textarea placeholder="Escreva a sua pergunta"></textarea>
+<label>Timeframe:</label>
+<select>
+    <option>M15</option>
+    <option>M30</option>
+    <option>H1</option>
+    <option>H4</option>
+</select>
 
 <br><br>
 
-<button onclick="analisarGrafico()">
-Enviar para análise
-</button>
-
-</div>
+<button onclick="analisarGrafico()">Enviar para análise</button>
 
 <div class="box">
-
 <h2>🤖 Resultado da Análise IA</h2>
 
 <p id="resultado">
@@ -45,8 +37,23 @@ Aguardando envio do gráfico...
 </div>
 
 <script>
-function analisarGrafico() {
-document.getElementById("resultado").innerHTML =
-"🤖 A analisar o gráfico... Aguarde.";
+
+function analisarGrafico(){
+
+let resultado = document.getElementById("resultado");
+
+resultado.innerHTML = "🤖 A analisar o gráfico... Aguarde.";
+
+setTimeout(function(){
+
+resultado.innerHTML =
+"📈 Análise concluída:<br><br>" +
+"Par: XAUUSD<br>" +
+"Timeframe: H1<br><br>" +
+"Zona identificada: Aguarde ligação com IA real.";
+
+},3000);
+
 }
+
 </script>
