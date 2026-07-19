@@ -1,109 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Mr Vilankulo FX</title>
-
-<style>
-body {
-    background:#111;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
-
-.box {
-    background:#222;
-    padding:20px;
-    margin:20px;
-    border-radius:15px;
-}
-
-button {
-    background:#00ff99;
-    border:none;
-    padding:15px;
-    border-radius:10px;
-    font-size:16px;
-}
-
-img {
-    max-width:90%;
-    margin-top:20px;
-    border-radius:10px;
-}
-</style>
-
-</head>
-
-<body>
-
-<h1>🤖 Mr Vilankulo FX</h1>
-<p>Análise Forex com Inteligência Artificial</p>
-
-<div class="box">
-
-<h2>Enviar gráfico MT5</h2>
-
-<input type="file" id="imagem" accept="image/*">
-
-<br><br>
-
-<button onclick="analisarGrafico()">
-Enviar para análise
-</button>
-
-<img id="preview">
-
-</div>
-
-
-<div class="box">
-
-<h2>Resultado da Análise IA</h2>
-
-<p id="resultado">
-Aguardando envio do gráfico...
-</p>
-
-</div>
-
-
-<script>
-
-function analisarGrafico(){
-
-let imagem = document.getElementById("imagem").files[0];
-
-if(!imagem){
-alert("Envie uma imagem do gráfico primeiro");
-return;
-}
-
-
-let leitor = new FileReader();
-
-leitor.onload=function(e){
-
-document.getElementById("preview").src=e.target.result;
-
-
 document.getElementById("resultado").innerHTML=
 
-"📊 Gráfico recebido.<br><br>"+
-"Análise IA em preparação...<br><br>"+
-"Mercado: XAUUSD<br>"+
-"Timeframe: analisar<br>"+
-"Aguardar confirmação de entrada.";
+"🤖 ANÁLISE MR VILANKULO FX<br><br>"+
 
-}
+"📌 Par: XAUUSD<br>"+
+"⏱️ Timeframe: M15 / H1<br><br>"+
 
+"📊 Tendência atual:<br>"+
+"Analisando estrutura do mercado...<br><br>"+
 
-leitor.readAsDataURL(imagem);
+"🎯 Entrada possível:<br>"+
+"BUY ou SELL após confirmação<br><br>"+
 
-}
+"🛑 Stop Loss:<br>"+
+"A definir pela zona de risco<br><br>"+
 
-</script>
+"✅ Take Profit:<br>"+
+"A definir pela próxima zona<br><br>"+
 
-
-</body>
-</html>
+"📝 Explicação:<br>"+
+"A IA vai analisar velas, tendência, suporte, resistência e zonas importantes.";
