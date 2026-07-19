@@ -1,4 +1,39 @@
-let preview = document.getElementById("previewGrafico");
+<style>
+body {
+    background: #0b0f19;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
 
-preview.src = URL.createObjectURL(imagem);
-preview.style.display = "block";
+h1 {
+    color: #00ff99;
+}
+
+.box {
+    background: #151c2c;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+button {
+    background: #00ff99;
+    color: black;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#previewGrafico {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+</style>
