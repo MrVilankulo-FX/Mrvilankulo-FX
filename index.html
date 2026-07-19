@@ -1,9 +1,10 @@
-<div class="box">
+<button onclick="analisarGrafico()">
+Enviar para análise
+</button>
 
-<h2>🤖 Resultado da Análise IA</h2>
-
-<p id="resultado">
-Aguardando envio do gráfico...
-</p>
-
-</div>
+<script>
+function analisarGrafico() {
+    document.getElementById("resultado").innerHTML =
+    "🤖 A analisar o gráfico... Aguarde.";
+}
+</script>
