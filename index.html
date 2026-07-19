@@ -1,39 +1,13 @@
-<style>
-body {
-    background: #0b0f19;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-}
+function analisarGrafico() {
 
-h1 {
-    color: #00ff99;
-}
+let imagem = document.getElementById("imagemGrafico").files[0];
 
-.box {
-    background: #151c2c;
-    padding: 20px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
+let resultado = document.getElementById("resultado");
 
-button {
-    background: #00ff99;
-    color: black;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
+let preview = document.getElementById("previewGrafico");
 
-button:hover {
-    opacity: 0.8;
-}
+preview.src = URL.createObjectURL(imagem);
 
-#previewGrafico {
-    margin-top: 20px;
-    border-radius: 10px;
+preview.style.display = "block";
+
 }
-</style>
