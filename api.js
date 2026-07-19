@@ -1,7 +1,11 @@
-export default async function handler(req, res) {
+fetch("api.js")
+.then(res => res.json())
+.then(data => {
 
-res.status(200).json({
-    resultado: "🤖 IA preparada para analisar o gráfico"
+document.getElementById("respostaIA").innerHTML = `
+🤖 Resultado da IA:
+
+${data.resultado}
+`;
+
 });
-
-}
