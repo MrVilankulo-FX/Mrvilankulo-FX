@@ -1,10 +1,52 @@
+<div class="box">
+
+<h2>📸 Enviar Gráfico MT5</h2>
+
+<p>
+Envie o seu screenshot do gráfico para preparar uma análise.
+</p>
+
+<input type="file" id="imagemGrafico" accept="image/*">
+
+<br><br>
+
+<input type="text" placeholder="Par: Ex XAUUSD">
+
+<br><br>
+
+<select>
+<option>Escolha o Timeframe</option>
+<option>M15</option>
+<option>M30</option>
+<option>H1</option>
+<option>H4</option>
+</select>
+
+<br><br>
+
+<textarea placeholder="Escreva a sua pergunta"></textarea>
+
+<br><br>
+
 <button onclick="analisarGrafico()">
 Enviar para análise
 </button>
 
+</div>
+
+<div class="box">
+
+<h2>🤖 Resultado da Análise IA</h2>
+
+<p id="resultado">
+Aguardando envio do gráfico...
+</p>
+
+</div>
+
 <script>
 function analisarGrafico() {
-    document.getElementById("resultado").innerHTML =
-    "🤖 A analisar o gráfico... Aguarde.";
+document.getElementById("resultado").innerHTML =
+"🤖 A analisar o gráfico... Aguarde.";
 }
 </script>
